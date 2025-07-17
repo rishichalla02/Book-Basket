@@ -1,0 +1,140 @@
+@import "../../index.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Glass morphism card */
+.loginContainer {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.glass-card {
+  width: 100%;
+  height: 95vh;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 0.5rem 2.5rem;
+  position: relative;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+}
+
+/* Logo container */
+.logo-container {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+  background: linear-gradient(to bottom right, #c4f3ff, #6262ba, #17013bc7);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 10px 30px rgba(67, 69, 73, 0.4);
+  transform: rotate(-3deg);
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: rotate(0deg) scale(1.1);
+  animation: pulse-glow 2s infinite;
+}
+
+/* Input styling */
+.input-group {
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  color: black;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.styled-input {
+  width: 100%;
+  padding: 0.4rem 0.4rem 0.4rem 2.5rem;
+  border-radius: 4rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #2c2c2c;
+  border: 1px solid rgba(200, 169, 106, 0.4);
+}
+
+.styled-input::placeholder {
+  color: black;
+}
+
+.styled-input:focus {
+  border-color: #130056b3;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(66, 58, 93, 0.5), 0 0 10px rgba(106, 145, 200, 0.5);
+}
+
+.styled-input:focus + .input-icon {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.input-group:focus-within .input-label {
+  color: rgb(0, 0, 0);
+}
+
+.checklist {
+  height: 10vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  scrollbar-width: thin;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.login-btn,
+.btn-text,
+.input-container input {
+  min-width: 0;
+}

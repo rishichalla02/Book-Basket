@@ -1,0 +1,132 @@
+@import "../../index.css";
+
+.main-list-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.list-container {
+  height: 70vh;
+  width: 95vw;
+  backdrop-filter: blur(20px);
+  padding: 0.9rem 2.5rem;
+  color: black;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(52, 42, 107, 0.413) transparent;
+  scrollbar-width: thin;
+}
+
+.tabel-container {
+  width: 100%;
+  height: 100%;
+}
+
+.list-table {
+  width: 90vw;
+  border-collapse: collapse;
+}
+
+.list-table th,
+.list-table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  text-align: center;
+}
+
+.list-table th {
+  padding: 0.9rem 2.5rem;
+  backdrop-filter: blur(20px);
+  color: black;
+  transition: all 0.3s cubic-bezier(0.8, 0.4, 0.5, 1);
+  margin-bottom: 2rem;
+  text-align: center;
+  gap: 4rem;
+  padding: 0.5rem;
+}
+
+.list-table tbody tr:hover {
+  backdrop-filter: blur(20px);
+  background: rgba(122, 122, 122, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.add-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.button-search {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.edit-fields {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 2600px) and (min-width: 1300px) {
+  .add-btn {
+    margin-right: 2.5rem;
+  }
+
+  .list-container {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 300px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .list-table th {
+    border-radius: 0;
+  }
+
+  .list-container {
+    margin: 1rem;
+    height: 55vh;
+  }
+
+  .list-table {
+    height: 100%;
+  }
+  .logo img {
+    width: 150px;
+  }
+
+  .add-search {
+    flex-direction: column;
+    gap: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .button-search {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .list-container {
+    height: 45vh;
+  }
+}

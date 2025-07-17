@@ -1,0 +1,80 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 35, 35, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.payment-options {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.payment-options label {
+  font-size: 1rem;
+  color: #2f2626;
+  display: block;
+  margin: 10px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-order,
+.btn-cancel,
+.btn-ok {
+  background: linear-gradient(to bottom right, hsl(192, 100%, 69%), #6262ba, #17013bc7);
+  border: 1px solid #a88734;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: #ddd;
+  border: 1px solid #aaa;
+}
+
+.btn-order:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .btn-order,
+  .btn-cancel,
+  .btn-ok {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

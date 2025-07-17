@@ -1,0 +1,21 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      fill: #0077b6; /* Ocean blue */
+    }
+    .icon {
+      fill: #00b4d8; /* Lighter ocean blue for contrast */
+    }
+  </style>
+  <!-- Simple basket icon -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="20" width="30" height="20" rx="3" class="icon" />
+    <line x1="0" y1="20" x2="15" y2="0" stroke="#00b4d8" stroke-width="3"/>
+    <line x1="30" y1="20" x2="15" y2="0" stroke="#00b4d8" stroke-width="3"/>
+  </g>
+  <!-- Logo text -->
+  <text x="50" y="45" class="text">Book Basket</text>
+</svg>

@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Login from './component/login/Login';
+import Dashboard from './screen/dashboard/Dashboard';
+import Home from './screen/user/Home';
+import InputBook from './screen/form/InputForm';
+import Cart from './screen/cart/Cart';
+import Card from './component/card/Card';
+import { ToastContainer } from 'react-toastify';
+import History from './screen/history/History';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/bookform" element={<InputBook />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/history" element={<History />} />
+      </Routes>
+      <ToastContainer position="top-right" autoClose={1000} />
+    </Router>
   );
 }
 

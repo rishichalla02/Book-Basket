@@ -1,0 +1,36 @@
+.greet-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  color: black;
+}
+
+.greet-container h1 {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 800px) and (min-width: 300px) {
+  .greet-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .greet-container h1 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 400px) {
+  .greet-container h1 {
+    font-size: 0.8rem;
+  }
+  .greet-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
