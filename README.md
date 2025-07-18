@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# 📚 Book Basket – eBook Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Book Basket is a fully functional eBook Store web application built using **React**, styled with **CSS & Tailwind CSS**, and powered by **Firebase** for real-time database and authentication. This project was developed as part of my **Semester 7 Summer Internship** (15 days) to showcase real-time cart management, book browsing, and purchase flow.
 
-## Available Scripts
+## 🚀 Getting Started
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses **Yarn** as the package manager.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- Yarn
+
+### 📦 Installation
+
+```bash
+git clone https://github.com/your-username/book-basket.git
+cd book-basket
+yarn install
+```
+
+### 🧑‍💻 Running Locally
+
+```bash
+yarn start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+
+## 🔐 Firebase Features
+
+- User Authentication (Login/Signup)
+- Real-Time Book Data Storage using Firebase Realtime Database
+- Cart and Order History Storage
+- Role-based Navigation (Admin vs User)
+- Secure Firebase Rules
+
+## 🛍 Features
+
+- 📚 View and search for books
+- 🛒 Add books to cart
+- ✅ Purchase books
+- 🕓 View order history
+- 👤 Admin dashboard for adding/editing books
+- 🔍 Responsive search and categorization
+- 💬 User-friendly UI with real-time updates
+
+## 🛠 Tech Stack
+
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS & custom CSS
+- **Database & Auth:** Firebase (Realtime Database & Authentication)
+- **Package Manager:** Yarn
+
+## 🧪 Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- `yarn start` — Runs the app in development mode.
+- `yarn build` — Builds the app for production.
+- `yarn test` — Launches the test runner.
+- `yarn eject` — Exposes the configurations (not recommended unless needed).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Folder Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+src/
+├── components/
+│   ├── bookStore/
+│   ├── header/
+│   ├── search_Bar/
+│   └── list/
+|   └── footer/
+|   └── login/
+|   └── button/
+├── screen/
+│   ├── Home.jsx
+|   ├── Dashboard.jsx
+│   ├── Cart.jsx
+│   └── History.jsx
+├── firebase/
+├── App.js
+└── index.js
+```
 
-### `npm test`
+## 📅 Internship Details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Duration:** 15 Days
+- **Company:** JNext Services
+- **Project:** Semester 7 Summer Internship Project
+- **Role:** Full-Stack Web Developer (React + Firebase)
 
-### `npm run build`
+## 🔗 Useful Links
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React Documentation](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [Create React App Docs](https://create-react-app.dev/docs/getting-started/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📜 License
 
-### `npm run eject`
+This project is for educational and demonstration purposes. No commercial license is granted.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to fork, learn, and customize this for your own internship or academic projects! 💡
