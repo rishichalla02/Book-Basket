@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addBook } from "../../feature/books/bookSlice";
 import { toast } from "react-toastify";
+import Footer from "../../component/footer/Footer";
 
 const db = getDatabase(app);
 
@@ -231,6 +232,7 @@ const InputBook = () => {
           <AnimatedBook />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

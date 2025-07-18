@@ -5,7 +5,7 @@ import "../header/greeting.css";
 const Greeting = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const { user } = useAuth();
-  const userName = user?.displayName || "User";
+  const userName = user?.displayName || "there";
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);

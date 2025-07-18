@@ -17,6 +17,7 @@
 
 .fields-book {
   width: 50%;
+  height: 83vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,6 +117,11 @@
   .book-form {
     flex-direction: column;
     align-items: center;
+    height: 90vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: rgba(52, 42, 107, 0.413) transparent;
+    scrollbar-width: thin;
   }
 
   .fields-book {
@@ -131,10 +137,12 @@
 
 @media (max-width: 700px) {
   .book-form {
-    flex-direction: column;
-    align-items: center;
+    height: 80vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: rgba(52, 42, 107, 0.413) transparent;
+    scrollbar-width: thin;
   }
-
   .fields-book {
     width: 90%;
     margin: 1rem 0;
