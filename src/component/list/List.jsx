@@ -27,6 +27,19 @@ const List = () => {
   const { user } = useAuth();
   const userRole = user?.role || "Guest";
 
+  const LogoLink = (e) => {
+    e.preventDefault();
+    if (!user) {
+      console.log("User not loaded yet");
+      return;
+    }
+    if (user?.role === "admin") {
+      navigate("https://book-basket-tau.vercel.app/dashboard");
+    } else if (user?.role === "user") {
+      navigate("https://book-basket-tau.vercel.app/home");
+    }
+  };
+
   const handleBook = (e) => {
     e.preventDefault();
 
@@ -45,11 +58,7 @@ const List = () => {
   if (loading) {
     return (
       <div className="main-list-container">
-        <Loading
-          type="books"
-          size="large"
-          message="Loading books..."
-        />
+        <Loading type="books" size="large" message="Loading books..." />
       </div>
     );
   }
@@ -70,15 +79,15 @@ const List = () => {
     <div className="main-list-container">
       <div className="add-search">
         <span className="logo">
-          <a href="http://localhost:3000/dashboard">
+          <a href="" onClick={LogoLink}>
             <img src="book-basket-logo.svg" alt="logo" />
           </a>
         </span>
         <div className="button-search">
           <Search books={books} onSearchResults={setFilteredBooks} />
-        <div className="relative bottom-2 max-[800px]:bottom-0">
-          <Button onClick={handleBook} text="Add Book" className="add-btn" />
-        </div>
+          <div className="relative bottom-2 max-[800px]:bottom-0">
+            <Button onClick={handleBook} text="Add Book" className="add-btn" />
+          </div>
         </div>
       </div>
       <div className="list-container">
