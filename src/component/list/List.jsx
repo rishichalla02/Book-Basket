@@ -27,19 +27,6 @@ const List = () => {
   const { user } = useAuth();
   const userRole = user?.role || "Guest";
 
-  const LogoLink = (e) => {
-    e.preventDefault();
-    if (!user) {
-      console.log("User not loaded yet");
-      return;
-    }
-    if (user?.role === "admin") {
-      navigate("https://book-basket-tau.vercel.app/dashboard");
-    } else if (user?.role === "user") {
-      navigate("https://book-basket-tau.vercel.app/home");
-    }
-  };
-
   const handleBook = (e) => {
     e.preventDefault();
 
@@ -79,7 +66,7 @@ const List = () => {
     <div className="main-list-container">
       <div className="add-search">
         <span className="logo">
-          <a href="" onClick={LogoLink}>
+          <a href="https://book-basket-tau.vercel.app/dashboard">
             <img src="book-basket-logo.svg" alt="logo" />
           </a>
         </span>
