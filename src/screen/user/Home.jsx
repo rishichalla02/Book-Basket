@@ -16,6 +16,19 @@ const Home = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
+  const LogoLink = (e) => {
+    e.preventDefault();
+    if (!user) {
+      console.log("User not loaded yet");
+      return;
+    }
+    if (user?.role === "admin") {
+      navigate("https://book-basket-tau.vercel.app/dashboard");
+    } else if (user?.role === "user") {
+      navigate("https://book-basket-tau.vercel.app/home");
+    }
+  };
+
   const [filteredBooks, setFilteredBooks] = useState([]);
   // Update filtered books when books change
   useEffect(() => {
@@ -61,7 +74,7 @@ const Home = () => {
       <Header />
       <header className="book-basket">
         <div className="logo">
-          <a href="https://book-basket-tau.vercel.app/home">
+          <a href="" onClick={LogoLink}>
             <img src="book-basket-logo.svg" alt="logo" />
           </a>
         </div>
