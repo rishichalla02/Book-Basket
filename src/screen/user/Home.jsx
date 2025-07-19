@@ -61,7 +61,7 @@ const Home = () => {
       <Header />
       <header className="book-basket">
         <div className="logo">
-          <a href="http://localhost:3000/home">
+          <a href="https://book-basket-tau.vercel.app/home">
             <img src="book-basket-logo.svg" alt="logo" />
           </a>
         </div>
